@@ -118,7 +118,7 @@ const {products,total}=useAppSelector((state)=>state.cart)
           <div className="space-y-2">
             <div className="flex justify-between text-lg">
               <p>Subtotal</p>
-              <p>{total}$</p>
+              <p>{total.toFixed(2)}$</p>
             </div>
             <div className="flex justify-between text-lg">
               <p>Delivery</p>
@@ -126,7 +126,7 @@ const {products,total}=useAppSelector((state)=>state.cart)
             </div>
             <div className="flex justify-between text-xl font-bold">
               <p>Total</p>
-              <p>{total-4.5}$</p>
+              <p>{(total-4.5).toFixed(2)}$</p>
             </div>
             <Button className="w-full">Checkout</Button>
           </div>
